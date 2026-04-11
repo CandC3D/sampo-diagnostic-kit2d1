@@ -451,6 +451,43 @@ body {
   border: 0.5px solid var(--vi-accent-soft);
 }
 
+/* ── Download card ── */
+.download-card {
+  background: var(--bg-secondary);
+  border: 0.5px solid var(--border-light);
+  border-left: 2px solid var(--vi-accent);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.download-card .download-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: .35rem;
+}
+.download-card .download-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: .6rem;
+}
+.download-btn {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  background: var(--vi-accent);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.download-btn:hover { opacity: .8; }
+
 /* ── Figure ── */
 .figure-block {
   margin: 1.5rem 0;
@@ -1319,7 +1356,11 @@ ASCII bar charts or clearly formatted visual summaries.
     <div class="section-label">Step 3: Calibrate your system</div>
     <p class="body-text">Before trusting any system with your real data, verify that it can detect sycophancy signals accurately. Five calibration transcripts with known embedded signals are provided. Each contains realistic human turns and system responses with precisely placed sycophancy patterns at different densities. A signal manifest is included so you can check the system's findings against ground truth.</p>
 
-    <p class="body-text"><a href="kit2d1_calibration_transcripts.zip" download style="color: var(--vi-accent); font-weight: 500; border-bottom: 0.5px solid var(--vi-accent); text-decoration: none;">Download calibration transcripts</a> <span style="font-size: 12px; color: var(--text-tertiary);">(ZIP, ~26 KB &mdash; 5 transcripts + signal manifest)</span></p>
+    <div class="download-card">
+      <div class="download-label">Calibration Transcripts</div>
+      <div class="download-desc">5 transcripts + signal manifest &middot; ZIP &middot; ~26 KB</div>
+      <a href="kit2d1_calibration_transcripts.zip" download class="download-btn">Download</a>
+    </div>
 
     <table class="cal-table">
       <thead>
